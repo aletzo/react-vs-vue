@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>React vs Vue.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<style>
+            .reveal-viewport {
+		        background: #fff;
+		        transition: background-color 4s ease,
+		            background-image 4s ease,
+		            color 4s ease;
+            }
+            .reveal * {
+                color: #4df7b9 !important;
+                text-transform: none !important;
+            }
+            .reveal p {
+                color: #555 !important;
+            }
+            .reveal .progress {
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            .street-fighter.reveal-viewport {
+		        background-image: linear-gradient(rgba(5, 8, 104, 1), rgba(4, 7, 85, 1));
+            }
+            .street-fighter .reveal * {
+                color: #fff !important;
+            }
+            .street-fighter .reveal .progress {
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            .street-fighter.black-bg.reveal-viewport {
+		        background: #000;
+		        transition: background-color 0.1s ease;
+            }
+
+            .vs-container {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .fight-container {
+                /*
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index:100;
+                */
+            }
+
+            img, p {
+		        transition: opacity 0.5s ease;
+            }
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="hello">
+				    <h1>hello</h1>
+				</section>
+				<section id="react-vs-vuejs">
+				    <div class="vs-container">
+				        <div>
+				            <img id="react-logo "src="./assets/logo-react.png" height="300" class="fragment" data-fragment-index="1">
+				            <img id="img-react" src="./assets/frameworks-react.png" height="80" class="fragment" data-fragment-index="3">
+				        </div>
+
+				        <div class="fragment" data-fragment-index="3" id="vs">
+				            <img id="img-vs" src="./assets/vs.png" height="200">
+				        </div>
+
+				        <div>
+				            <img id="vuejs-logo" src="./assets/logo-vuejs.png" height="300" class="fragment" data-fragment-index="2">
+				            <img id="img-vuejs" src="./assets/frameworks-vuejs.png" height="80" class="fragment" data-fragment-index="3">
+				        </div>
+				    </div>
+				</section>
+				<section id="jquery">
+				        <img src="./assets/headers-jquery.png">
+				</section>
+				<section id="angular">
+				        <img src="./assets/headers-angular.png">
+
+				        <br>
+
+				        <img class="fragment" src="./assets/car-ken.png" height="400">
+				</section>
+				<section id="react">
+				        <img src="./assets/headers-react.png">
+
+				        <br>
+
+				        <img class="fragment" src="./assets/attack-ryu.gif" height="400">
+				</section>
+				<section id="frameworks">
+				    <img src="./assets/headers-front-end-frameworks.png">
+
+				    <img src="./assets/player-select-screen-from-turbo.png" height="400">
+
+				    <br>
+
+				    <section>
+				        
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-angular.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-backbonejs.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-ember.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-mithril.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-react.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-svelte.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-vuejs.png">
+				    </section>
+				    <section>
+				        <img src="./assets/frameworks-vanilla.png">
+				    </section>
+				    <section>
+				        ?
+				    </section>
+				</section>
+				<section id="similarities">
+				    <div class="fight-container">
+				        <img src="./assets/logo-react.png" height="100">
+				        <img src="./assets/vs.png" height="50">
+				        <img src="./assets/logo-vuejs.png" height="100">
+				    </div>
+
+				    <img src="./assets/headers-similarities.png">
+
+				    <br>
+
+				    <section>
+				        
+				    </section>
+
+				    <section>
+				        <img src="./assets/similarities-components.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-hooks.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-mobile-native-apps.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-nextjs-nuxtjs.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-routing.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-spa.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-ssr.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-state-management.png">
+				    </section>
+				    <section>
+				        <img src="./assets/similarities-typescript.png">
+				    </section>
+				</section>
+				<section id="differences">
+				    <div class="fight-container">
+				        <img src="./assets/logo-react.png" height="100">
+				        <img src="./assets/vs.png" height="50">
+				        <img src="./assets/logo-vuejs.png" height="100">
+				    </div>
+
+				    <img src="./assets/headers-differences.png">
+
+				    <section>
+				        
+				    </section>
+				    <section>
+				        <img src="./assets/differences-learning-curve.png">
+				    </section>
+				    <section>
+				        <img src="./assets/differences-performance.png">
+				    </section>
+				    <section>
+				        <img src="./assets/differences-community.png">
+				    </section>
+				    <section>
+				        <img src="./assets/differences-functional-paradigm.png">
+				    </section>
+				    <section>
+				        <img src="./assets/differences-adoption-in-launchmetrics.png">
+				    </section>
+				</section>
+				<section id="demo">
+				    <img src="./assets/headers-demo.png">
+				</section>
+				<section id="code">
+				    <img src="./assets/headers-code.png">
+				</section>
+				<section id="thank-you">
+				    <img src="./assets/thank-you-vega.png" height="400">
+
+				    <img class="fragment" src="./assets/questions-black.png">
+				    <div class="r-stack">
+				        <img class="fragment" src="./assets/countdown-9.png">
+				        <img class="fragment" src="./assets/countdown-8.png">
+				        <img class="fragment" src="./assets/countdown-7.png">
+				        <img class="fragment" src="./assets/countdown-6.png">
+				        <img class="fragment" src="./assets/countdown-5.png">
+				        <img class="fragment" src="./assets/countdown-4.png">
+				        <img class="fragment" src="./assets/countdown-3.png">
+				        <img class="fragment" src="./assets/countdown-2.png">
+				        <img class="fragment" src="./assets/countdown-1.png">
+				        <img class="fragment" src="./assets/countdown-0.png">
+				    </div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+                disableLayout: false,
+				            
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+			Reveal.on( 'slidechanged', event => {
+                console.log('slide event');
+                console.log(event);
+
+                document.body.classList.toggle('street-fighter', event.indexh > 1);
+
+                document.body.classList.toggle('black-bg', event.currentSlide.id === 'thank-you');
+
+                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+            } );
+            Reveal.on( 'fragmentshown', event => {
+                console.log('fragment event');
+                console.log(event);
+
+                if (event?.fragment?.id === 'img-react') {
+                    document.body.classList.add('street-fighter');
+
+                    const audio = new Audio('./assets/sounds-the-world-warrior.mp3');
+
+                    audio.play();
+
+                    setTimeout(() => {
+                        audio.pause();
+                    }, 11200);
+                }
+            } );
+		</script>
+	</body>
+</html>
