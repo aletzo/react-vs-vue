@@ -16,9 +16,9 @@
 		<style>
             .reveal-viewport {
 		        background: #fff;
-		        transition: background-color 4s ease,
-		            background-image 4s ease,
-		            color 4s ease;
+		        transition: background-color 2s ease,
+		            background-image 2s ease,
+		            color 2s ease;
             }
             .reveal * {
                 color: #4df7b9 !important;
@@ -32,7 +32,7 @@
             }
 
             .street-fighter.reveal-viewport {
-		        background-image: linear-gradient(rgba(5, 8, 104, 1), rgba(4, 7, 85, 1));
+		        background-color: rgba(1, 13, 95, 1);
             }
             .street-fighter .reveal * {
                 color: #fff !important;
@@ -85,7 +85,7 @@
 				        </div>
 
 				        <div class="fragment" data-fragment-index="3" id="vs">
-				            <img id="img-vs" src="./assets/vs.png" height="200">
+				            <img id="img-vs" src="./assets/vs-transparent.png" height="200">
 				        </div>
 
 				        <div>
@@ -152,7 +152,7 @@
 				<section id="similarities">
 				    <div class="fight-container">
 				        <img src="./assets/logo-react.png" height="100">
-				        <img src="./assets/vs.png" height="50">
+				        <img src="./assets/vs-transparent.png" height="50">
 				        <img src="./assets/logo-vuejs.png" height="100">
 				    </div>
 
@@ -195,7 +195,7 @@
 				<section id="differences">
 				    <div class="fight-container">
 				        <img src="./assets/logo-react.png" height="100">
-				        <img src="./assets/vs.png" height="50">
+				        <img src="./assets/vs-transparent.png" height="50">
 				        <img src="./assets/logo-vuejs.png" height="100">
 				    </div>
 
@@ -231,15 +231,15 @@
 
 				    <img class="fragment" src="./assets/questions-black.png">
 				    <div class="r-stack">
-				        <img class="fragment" src="./assets/countdown-9.png">
-				        <img class="fragment" src="./assets/countdown-8.png">
-				        <img class="fragment" src="./assets/countdown-7.png">
-				        <img class="fragment" src="./assets/countdown-6.png">
-				        <img class="fragment" src="./assets/countdown-5.png">
-				        <img class="fragment" src="./assets/countdown-4.png">
-				        <img class="fragment" src="./assets/countdown-3.png">
-				        <img class="fragment" src="./assets/countdown-2.png">
-				        <img class="fragment" src="./assets/countdown-1.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-9.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-8.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-7.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-6.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-5.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-4.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-3.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-2.png">
+				        <img class="fragment" data-autoslide="1000" src="./assets/countdown-1.png">
 				        <img class="fragment" src="./assets/countdown-0.png">
 				    </div>
 				</section>
@@ -266,23 +266,36 @@
 			Reveal.on( 'slidechanged', event => {
                 console.log('slide event');
                 console.log(event);
+                
+                const classList = document.body.classList;
 
-                document.body.classList.toggle('street-fighter', event.indexh > 1);
+                if (event.indexh > 1 && !classList.contains('street-fighter')) {
+                    classList.add('street-fighter');
+                }
 
-                document.body.classList.toggle('black-bg', event.currentSlide.id === 'thank-you');
+
+                if (event.indexh === 0) {
+                    classList.remove('street-fighter');
+                }
+
+                classList.toggle('black-bg', event.currentSlide.id === 'thank-you');
 
                 // event.previousSlide, event.currentSlide, event.indexh, event.indexv
             } );
+
+            const audio = new Audio('./assets/sounds-the-world-warrior.mp3');
+
             Reveal.on( 'fragmentshown', event => {
                 console.log('fragment event');
                 console.log(event);
 
-                if (event?.fragment?.id === 'img-react') {
+                if (event?.fragment?.id === 'vuejs-logo') {
                     document.body.classList.add('street-fighter');
 
-                    const audio = new Audio('./assets/sounds-the-world-warrior.mp3');
 
-                    audio.play();
+                    if (audio.paused) {
+                        audio.play();
+                    }
 
                     setTimeout(() => {
                         audio.pause();
