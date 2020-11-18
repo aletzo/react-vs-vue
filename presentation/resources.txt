@@ -1,0 +1,17 @@
+[OK] https://medium.com/dailyjs/a-realworld-comparison-of-front-end-frameworks-2020-4e50655fe4c1
+[  ] https://drive.google.com/file/d/1JU0CgFxw818zEM-nnN9da9blHMwWjgi2/view?usp=sharing
+[XX] https://naturaily.com/blog/react-vue-similarities-and-differences
+[OK] https://dook.pro/blog/programming/37-react-vs-vue-in-2020-what-is-the-best-choice-
+[OK] https://kodytechnolab.com/reactjs-vs-vuejs-comparison
+[  ] https://keenethics.com/blog/react-vs-vue
+[  ] https://www.educba.com/react-js-vs-vue-js/
+[  ] https://pagepro.co/blog/react-vs-vue-a-quick-comparison/
+[  ] https://www.merixstudio.com/blog/vue-vs-react-which-one-to-choose/
+[  ] https://clockwise.software/blog/angular-vs-react-vs-vue/
+[  ] https://blog.railwaymen.org/vue-vs-react-which-one-is-better-for-your-app-similarities-differences
+[  ] https://rubygarage.org/blog/vuejs-vs-react-battle
+[  ] https://huspi.com/blog-open/vuejs-or-reactjs-technology-of-2020
+[OK] https://towardsdatascience.com/vue-vs-react-vs-angular-114718eac3c5
+[OK] https://tekkiwebsolutions.com/blog/comparison-of-angular-vs-react-vs-vue/
+[OK] https://www.simform.com/best-frontend-frameworks/
+
