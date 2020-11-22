@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="app">
+        <h1>TODOs</h1>
+
+        Show
+
+        <label>
+            <input type="radio" name="filter" checked> all
+        </label>
+
+        <label>
+            <input type="radio" name="filter"> pending
+        </label>
+        
+        <ol>
+            <li>
+                <span>&vellip;&vellip;</span>
+                <label>
+                    <input type="checkbox"> todo 1 
+                </label>
+                <button>x</button>
+            </li>
+            <li class="done">
+                <span>&vellip;&vellip;</span>
+                <label>
+                    <input type="checkbox" checked> todo 2 
+                </label>
+                <button>x</button>
+            </li>
+            <li class="done">
+                <span>&vellip;&vellip;</span>
+                <label>
+                    <input type="checkbox" checked> todo 3 
+                </label>
+                <button>x</button>
+            </li>
+            <li class="subtask done">
+                <span>&vellip;&vellip;</span>
+                <label>
+                    <input type="checkbox" checked> subtask 1
+                </label>
+                <button>x</button>
+            </li>
+            <li class="subtask done">
+                <span>&vellip;&vellip;</span>
+                <label>
+                    <input type="checkbox" checked> subtask 2 
+                </label>
+                <button>x</button>
+            </li>
+        </ol>
+        <input type="text" placeholder="add item...">
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+#app {
+    color: #444;
+    font-family: 'Montserrat', cursive;
+    font-size: 2em;
+    margin: 5em auto 0;
+    width: 500px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    height: 2em;
+    position: relative;
+    top: 2px;
+    width: 6%;
+}
+
+li {
+    font-family: 'Itim', cursive;
+    list-style: none;
+    margin: .5em 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+li button {
+    background:none;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    cursor: move;
+}
+
+li > button,
+li > span {
+    visibility: hidden;
+}
+li:hover > button,
+li:hover > span {
+    visibility: visible;
+}
+li.done label {
+    text-decoration: line-through;
+}
+li.subtask {
+    position: relative;
+    left: 1em;
+}
+
+input[type="text"] {
+    color: #444;
+    font-size: 1em;
+    height: 2em;
+    width: 100%;
+}
