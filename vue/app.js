@@ -2,14 +2,12 @@ const App = {
     data() {
         return {
             header : 'TODOs',
-            filter: 'all',
         }
     },
     methods: {
     },
     template: `
     <todo-header :header="header"></todo-header>
-    <todo-filter :filter="filter"></todo-filter>
     <todo-list></todo-list>
     `
 }
@@ -23,40 +21,38 @@ app.component('todo-header', {
     `
 })
 
-app.component('todo-filter', {
-    props: ['filter'],
-    template: `
-    Show
-
-    <label :class="{ filter: true, selected: filter === 'all' }">
-        <input type="radio" name="filter" v-model="filter" v-bind:value="all"> all
-    </label>
-
-    <label :class="{ filter: true, selected: filter === 'pending' }">
-        <input type="radio" name="filter" v-model="filter" v-bind:value="pending"> pending
-    </label>
-    `
-})
-
 app.component('todo-list', {
+    computed: {
+        filteredItems() {
+            if (this.filter === 'all') {
+                return this.items
+            }
+
+            return this.items.filter(item => item.status === this.filter)
+        }
+    },
     data() {
         return {
+            filter: 'all',
             items: [
-                { done: false, level: 0, text: 'todo 1'    },
-                { done: true,  level: 0, text: 'todo 2'    },
-                { done: true,  level: 0, text: 'todo 3'    },
-                { done: true,  level: 1, text: 'subtask 1' },
-                { done: true,  level: 1, text: 'subtask 2' },
+                { level: 0, status: 'pending', text: 'todo 1'    },
+                { level: 0, status: 'done',    text: 'todo 2'    },
+                { level: 0, status: 'done',    text: 'todo 3'    },
+                { level: 1, status: 'done',    text: 'subtask 1' },
+                { level: 1, status: 'done',    text: 'subtask 2' },
             ]
         }
     },
     methods: {
         onAddItem: function (newItem) {
             this.items.push({
-                done: false,
                 level: 0,
+                status: 'pending',
                 text: newItem,
             })
+        },
+        onChangeFilter: function (selectedFilter) {
+            this.filter = selectedFilter
         },
         onDeleteItem: function (itemIndex) {
             this.items = this.items.filter((item, index) => index !== itemIndex)
@@ -70,9 +66,12 @@ app.component('todo-list', {
         }
     },
     template: `
+    <todo-filter
+        @change-filter="onChangeFilter"
+        ></todo-filter>
     <ol>
         <todo-item 
-            v-for="(item, index) in items"
+            v-for="(item, index) in filteredItems"
             :index="index"
             :item="item"
             @delete-item="onDeleteItem"
@@ -80,6 +79,54 @@ app.component('todo-list', {
         ></todo-item>
     </ol>
     <todo-add @add-item="onAddItem"></todo-add>
+    `
+})
+
+app.component('todo-filter', {
+    data() {
+        return {
+            filter: 'all'
+        }
+    },
+    methods: {
+        changeFilter: function (filter) {
+            this.$emit('change-filter', filter)
+        }
+    },
+    template: `
+    <div>
+        Show
+
+        <label :class="{ filter: true, selected: filter === 'all' }">
+            <input
+                type="radio" 
+                name="filter"
+                v-model="filter"
+                @click="changeFilter('all')"
+                value="all"
+            > all
+        </label>
+
+        <label :class="{ filter: true, selected: filter === 'done' }">
+            <input
+                type="radio"
+                name="filter"
+                v-model="filter"
+                @click="changeFilter('done')"
+                value="done"
+            > done
+        </label>
+
+        <label :class="{ filter: true, selected: filter === 'pending' }">
+            <input
+                type="radio"
+                name="filter"
+                v-model="filter"
+                @click="changeFilter('pending')"
+                value="pending"
+            > pending
+        </label>
+    </div>
     `
 })
 
@@ -94,10 +141,10 @@ app.component('todo-item', {
     },
     props: ['index', 'item'],
     template: `
-    <li :class="{ done: item.done, subtask: item.level === 1 }">
+    <li :class="{ done: item.status === 'done', subtask: item.level === 1 }">
         <span @click="dragItem(index)">&vellip;&vellip;</span>
         <label>
-            <input type="checkbox" v-model="item.done"> {{index}} {{item.text}}
+            <input type="checkbox" v-model="item.done">{{item.text}}
         </label>
         <button @click="deleteItem(index)">x</button>
     </li>
