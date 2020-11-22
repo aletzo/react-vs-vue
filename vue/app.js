@@ -65,9 +65,28 @@ app.component('todo-list', {
             })
         },
         onToggleItem: function (itemIndex) {
+            let isParent = false
+            let newStatus
+            let siblingReached = false
+
             this.items.map((item, index) => {
                 if (index === itemIndex) {
-                    item.status = item.status === 'done' ? 'pending' : 'done'
+                    newStatus = item.status === 'done' ? 'pending' : 'done'
+
+                    item.status = newStatus
+
+                    isParent = item.level === 0
+                }
+
+                if (index > itemIndex && isParent) {
+
+                    if (item.level === 1) {
+                        if (!siblingReached) {
+                            item.status = newStatus
+                        }
+                    } else {
+                        siblingReached = true
+                    }
                 }
             })
         },
