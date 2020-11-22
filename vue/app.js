@@ -63,7 +63,14 @@ app.component('todo-list', {
                     item.level = item.level === 0 ? 1 : 0
                 }
             })
-        }
+        },
+        onToggleItem: function (itemIndex) {
+            this.items.map((item, index) => {
+                if (index === itemIndex) {
+                    item.status = item.status === 'done' ? 'pending' : 'done'
+                }
+            })
+        },
     },
     template: `
     <todo-filter
@@ -76,6 +83,7 @@ app.component('todo-list', {
             :item="item"
             @delete-item="onDeleteItem"
             @drag-item="onDragItem"
+            @toggle-item="onToggleItem"
         ></todo-item>
     </ol>
     <todo-add @add-item="onAddItem"></todo-add>
@@ -94,7 +102,7 @@ app.component('todo-filter', {
         }
     },
     template: `
-    <div>
+    <p>
         Show
 
         <label :class="{ filter: true, selected: filter === 'all' }">
@@ -126,25 +134,42 @@ app.component('todo-filter', {
                 value="pending"
             > pending
         </label>
-    </div>
+    </p>
     `
 })
 
 app.component('todo-item', {
+    computed: {
+        checked: {
+            get () {
+                return this.item.status === 'done'
+            },
+            set (val) {
+                // set nothing?
+            }
+        }
+    },
     methods: {
         deleteItem: function (index) {
             this.$emit('delete-item', index)
         },
         dragItem: function(index) {
             this.$emit('drag-item', index)
-        }
+        },
+        toggleItem: function (index) {
+            this.$emit('toggle-item', index)
+        },
     },
     props: ['index', 'item'],
     template: `
     <li :class="{ done: item.status === 'done', subtask: item.level === 1 }">
         <span @click="dragItem(index)">&vellip;&vellip;</span>
         <label>
-            <input type="checkbox" v-model="item.done">{{item.text}}
+            <input 
+                type="checkbox"
+                v-model="checked"
+                @click="toggleItem(index)"
+            >{{item.text}}
         </label>
         <button @click="deleteItem(index)">x</button>
     </li>
