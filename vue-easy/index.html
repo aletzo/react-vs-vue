@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ header }}</h1>
+        <p>
+            Show
+
+            <label :class="{ filter: true, selected: filter === 'all' }">
+                <input
+                    type="radio" 
+                    name="filter"
+                    v-model="filter"
+                    @click="changeFilter('all')"
+                    value="all"
+                > all
+            </label>
+
+            <label :class="{ filter: true, selected: filter === 'done' }">
+                <input
+                    type="radio"
+                    name="filter"
+                    v-model="filter"
+                    @click="changeFilter('done')"
+                    value="done"
+                > done
+            </label>
+
+            <label :class="{ filter: true, selected: filter === 'pending' }">
+                <input
+                    type="radio"
+                    name="filter"
+                    v-model="filter"
+                    @click="changeFilter('pending')"
+                    value="pending"
+                > pending
+            </label>
+        </p>
+        <ol>
+            <li :class="{ done: item.status === 'done', subtask: item.level === 1 }"
+                v-for="(item, index) in filteredItems"
+            >
+                <span @click="dragItem(index)">&vellip;&vellip;</span>
+                <label>
+                    <input 
+                        type="checkbox"
+                        v-model="item.status"
+                        true-value="done"
+                        false-value="pending"
+                        :checked="item.status === 'done'"
+                        @click="toggleItem(index)"
+                        >{{item.text}}
+                </label>
+                <button @click="deleteItem(index)">x</button>
+            </li>
+        </ol>
+        <input type="text" @keyup.enter="addItem(newItem)" v-model="newItem" placeholder="add item">
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
