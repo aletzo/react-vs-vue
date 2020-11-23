@@ -274,6 +274,79 @@
 				    <img src="./assets/headers-differences.png">
 
 				</section>
+
+				<section>
+					<div class="fight-container">
+						<img src="./assets/react-jsx.png" height="50"><br>
+						<img src="./assets/vs-transparent.png" height="100"><br>
+						<img src="./assets/vue-templates.png" height="50">
+					</div>
+				</section>
+				<section>
+
+					<img src="./assets/react-jsx.png" height="50">
+
+					<p>
+						<pre>
+							<code data-trim data-noescape data-line-numbers>
+								<script type="text/template">
+								const names = [‘John’, ‘Sarah’, ‘Kevin’, ‘Alice’];
+								const displayNames = (
+								<ul>
+									{names.map(name => <li>{name}</li> )}
+								  </ul>
+								);
+								ReactDOM.render(
+								displayNames,
+								document.getElementById(‘root’)
+								);
+								</script>
+							  </code>
+						</pre>
+					</p>
+				</section>
+
+				<section>
+					<img src="./assets/vue-templates.png" height="50">
+
+					<section>
+						<p>
+						<pre>
+							<code class="html" data-trim data-noescape data-line-numbers>
+								<script type="text/template">
+									<div id=”root”>
+									  <ul>
+										<li v-for=’name in listOfNames’>
+										  {{name}}
+										</li>
+									  </ul>
+									</div>
+								</script>
+							  </code>
+						</pre>
+						</p>
+					</section>
+
+					<section>
+						<p>
+						<pre>
+							<code class="javascript" data-trim data-noescape data-line-numbers>
+								new Vue({
+								  el:”#root”,
+								  data: {
+									listOfNames: [‘Kevin’, ‘John’, ‘Sarah’, ‘Alice’]
+								  }
+								});
+							  </code>
+						</pre>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<img src="./assets/vue-jsx-component.png" style="margin-top: 0">
+				</section>
+
 				<section>
 				    <img src="./assets/differences-learning-curve.png">
 				</section>
