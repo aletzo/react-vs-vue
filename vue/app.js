@@ -209,7 +209,12 @@ app.component('todo-add', {
         }
     },
     template: `
-        <input type="text" @keyup.enter="addItem" v-model="newItem" placeholder="add item">
+        <input 
+            type="text"
+            @keyup.enter="addItem"
+            v-model="newItem"
+            placeholder="add item"
+        >
     `
 })
 

@@ -66,7 +66,12 @@
                 <button @click="deleteItem(index)">x</button>
             </li>
         </ol>
-        <input type="text" @keyup.enter="addItem(newItem)" v-model="newItem" placeholder="add item">
+        <input
+            type="text"
+            @keyup.enter="addItem(newItem)"
+            v-model="newItem"
+            placeholder="add item"
+        >
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
