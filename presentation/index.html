@@ -514,7 +514,11 @@
 
 				</section>
 				<section>
-				    <img src="./assets/differences/functional-paradigm.png">
+				    <img src="./assets/differences/architecture.png">
+
+				    <p class="fragment">Functional paradigm</p>
+				    <p class="fragment">one-way data flow vs two-way data flow</p>
+
 				</section>
 				<section>
 				    <img src="./assets/differences/adoption-in-launchmetrics.png">
@@ -567,9 +571,6 @@
 			});
 
 			Reveal.on( 'slidechanged', event => {
-                console.log('slide event');
-                console.log(event);
-                
                 const classList = document.body.classList;
 
                 if (event.indexh > 1 && !classList.contains('street-fighter')) {
@@ -589,9 +590,6 @@
             const audio = new Audio('./assets/sounds-the-world-warrior.mp3');
 
             Reveal.on( 'fragmentshown', event => {
-                console.log('fragment event');
-                console.log(event);
-
                 if (event?.fragment?.id === 'vuejs-logo') {
                     document.body.classList.add('street-fighter');
 
