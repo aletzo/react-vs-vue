@@ -56,6 +56,13 @@
                 flex-direction: row;
                 justify-content: center;
             }
+            .summary-container {
+                align-items: baseline;
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                justify-content: space-between;
+            }
             .fight-container {
                 /*
                 align-items: center;
@@ -515,6 +522,8 @@
 				    <img src="./assets/differences/community.png">
 
 				    <section>
+				        <p class"fragment">Talent pool</p>
+				        <p class"fragment">Onboarding new hires</p>
 				    </section>
 				    <section>
 				        <img src="./assets/stackoverflow-chart.png" height="400">
@@ -525,6 +534,8 @@
 				        <img class="fragment" src="./assets/github-stars/mobx.png">
 				        <img class="fragment" src="./assets/github-stars/redux.png">
 				        <img class="fragment" src="./assets/github-stars/vuex.png">
+				        <img class="fragment" src="./assets/github-stars/react-native.png">
+				        <img class="fragment" src="./assets/github-stars/vue-native.png">
 				    </section>
 
 				</section>
@@ -532,7 +543,10 @@
 				    <img src="./assets/differences/architecture.png">
 
 				    <p class="fragment">Functional paradigm</p>
-				    <p class="fragment">one-way data flow vs two-way data flow</p>
+				    <p class="fragment">one-way and two-way data flows</p>
+				    <p class="fragment">Freedom of choice</p>
+				    <p class="fragment">Learning curve</p>
+				    <p class="fragment">Room of human error</p>
 
 				</section>
 				<section>
@@ -544,8 +558,27 @@
 				    <p class="fragment">Easier to share dev-power</p>
 				    <p class="fragment">Unified front-end components (https://bit.dev)</p>
 				</section>
-				<section id="code">
-				    <img src="./assets/headers/code.png">
+				<section id="summary">
+				    <img src="./assets/headers/summary.png">
+
+				    <div class="summary-container">
+				        <div>
+				            <img src="./assets/logo-react.png" height="100">
+				            <br>
+				            <img src="./assets/frameworks/react.png" height="80">
+				            <p class="fragment">architecture</p>
+				            <p class="fragment">talent pool</p>
+				            <p class="fragment">native mobile apps</p>
+				        </div>
+				        <div>
+				            <img src="./assets/logo-vuejs.png" height="100">
+				            <br>
+				            <img src="./assets/frameworks/vuejs.png" height="80">
+				            <p class="fragment">legacy codebase</p>
+				            <p class="fragment">tech stack limitations</p>
+				            <p class="fragment">performance</p>
+				        </div>
+				    </div>
 				</section>
 				<section id="thank-you">
 				    <img src="./assets/thank-you-vega.png" height="400">
