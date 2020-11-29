@@ -9,3 +9,19 @@ Along with the presentation there are 3 implementations of a TODO app:
 3. in Vue.js with plain HTML
 
 They all share the same CSS and HTML.
+
+![Screen shot from the TODOs app](https://github.com/aletzo/react-vs-vue/blob/master/presentation/assets/demo-todos.png?raw=true)
+
+
+
+How to run the presentation
+===========================
+
+Please follow the instructions inside `presentation/`.
+
+
+
+How to run the apps
+===================
+
+Please follow the instructions inside each respective directory (`react/`, `vue-easy/` or `vue/`).
