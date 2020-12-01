@@ -138,7 +138,7 @@
 
 				        <img class="fragment" src="./assets/attack-ryu.gif" height="400">
 				</section>
-				<section id="frameworks">
+				<section id="frontend-frameworks">
 				    <img src="./assets/headers/front-end-frameworks.png">
 
 				    <img src="./assets/player-select-screen-from-turbo.png" height="400">
@@ -355,15 +355,150 @@
 					</section>
 				</section>
 
-				<section id="demo">
-				    <img src="./assets/headers/demo.png">
-
-				    <br>
-
-				    <iframe class="fragment demo" src="http://localhost:8008"></iframe>
+				<section id="documentation">
+					<img src="./assets/documentation.png">
+					<p class="text">
+						React’s documentation pales in comparison with Vue’s.
+						It goes through the basics of React development and includes some advanced concepts but the presentation isn’t as accessible or well-structured.
+					</p>
 				</section>
+				<section id="community">
+					<img src="./assets/differences/community.png">
 
-				<section id="jsx-vue-templates">
+					<section>
+					</section>
+					<section>
+						<p class="fragment text">Size of talent pool</p>
+						<p class="fragment text">Attracting talent</p>
+						<p class="fragment text">Onboarding new hires</p>
+					</section>
+					<section>
+						<div class="r-stack">
+							<img class="fragment" src="./assets/state-of-js/satisfaction-0.png" height="400">
+							<img class="fragment" src="./assets/state-of-js/satisfaction-1.png" height="400">
+							<img class="fragment" src="./assets/state-of-js/satisfaction-2.png" height="400">
+						</div>
+
+						<small class="fragment text">Source: https://2019.stateofjs.com/overview/</small>
+					</section>
+					<section>
+						<img class="fragment" src="./assets/state-of-js/satisfaction-3.png" height="400">
+
+						<small class="fragment text">Source: https://2019.stateofjs.com/front-end-frameworks/</small>
+					</section>
+					<section>
+						<img src="./assets/github-stars/react.png">
+						<img class="fragment github-stars" src="./assets/github-stars/vuejs.png">
+						<img class="fragment github-stars" src="./assets/github-stars/mobx.png">
+						<img class="fragment github-stars" src="./assets/github-stars/redux.png">
+						<img class="fragment github-stars" src="./assets/github-stars/vuex.png">
+						<img class="fragment github-stars" src="./assets/github-stars/react-native.png">
+						<img class="fragment github-stars" src="./assets/github-stars/vue-native.png">
+					</section>
+					<section>
+						<div class="r-stack">
+							<img class="fragment" src="./assets/stackoverflow/popularity-0.png" height="400">
+							<img class="fragment" src="./assets/stackoverflow/popularity-1.png" height="400">
+							<img class="fragment" src="./assets/stackoverflow/popularity-2.png" height="400">
+						</div>
+
+						<small class="fragment text">Source: https://insights.stackoverflow.com/survey/2020#technology-web-frameworks-all-respondents2</small>
+					</section>
+
+					<section>
+						<img src="./assets/stackoverflow-chart.png" height="400">
+					</section>
+				</section>
+				<section id="architecture">
+					<img src="./assets/differences/architecture.png">
+
+					<p class="fragment text">Functional paradigm</p>
+					<p class="fragment text">One-way or two-way data flows</p>
+					<p class="fragment text">Freedom of choice</p>
+					<p class="fragment text">Room for human error</p>
+					<p class="fragment text">Version updates with breaking changes</p>
+					<p class="fragment text">Getting started complexity</p>
+				</section>
+				<section id="learning-curve">
+					<img src="./assets/differences/learning-curve.png">
+
+					<p class="fragment text">Functional paradigm</p>
+					<p class="fragment text">JSX</p>
+					<p class="fragment text">ES2015+</p>
+					<p class="fragment text">Build systems</p>
+				</section>
+				<section id="create-react-app-vs-vuecli">
+
+					<section>
+						<div class="fight-container">
+							<img src="./assets/create-react-app.png" height="50"><br>
+							<img src="./assets/vs.png" height="100"><br>
+							<img src="./assets/vue-cli.png" height="50">
+						</div>
+					</section>
+
+					<section>
+						<img src="./assets/create-react-app.png" height="50"><br>
+						<pre>
+							<code data-trim>
+								npx create-react-app my-app
+						    </code>
+						</pre>
+					</section>
+
+					<section>
+						<img src="./assets/vue-cli.png" height="50"><br>
+						<pre>
+							<code data-trim>
+								npx @vue/cli create --default hello-world
+						    </code>
+						</pre>
+					</section>
+
+					<section>
+						<pre>
+							<code data-trim>
+								npm install -g @vue/cli
+						    </code>
+							<code data-trim>
+							    vue create hello-world
+						    </code>
+						</pre>
+						<img src="./assets/vuecli/cli-new-project.png" height="500">
+					</section>
+
+					<section>
+						<img src="./assets/vuecli/cli-select-features.png" height="500">
+					</section>
+
+					<section>
+						<pre>
+							<code data-trim data-line-numbers>
+							    vue ui
+						    </code>
+						</pre>
+						<img src="./assets/vuecli/vuecli-create.png" height="500">
+					</section>
+
+					<section>
+						<img src="./assets/vuecli/vuecli-presets.png" height="400">
+					</section>
+
+					<section>
+						<img src="./assets/vuecli/vuecli-features.png" height="500" width="1000">
+						<img src="./assets/vuecli/vuecli-features2.png" height="100" width="1000">
+					</section>
+
+					<section>
+						<img src="./assets/vuecli/vuecli-dependencies.png">
+					</section>
+
+					<section>
+						<img src="./assets/vuecli/vuecli-dependencies-install.png">
+					</section>
+
+				</section>
+				<section id="jsx-vs-vue-templates">
 					<section>
 						<div class="fight-container">
 							<img src="./assets/react-jsx.png" height="50"><br>
@@ -439,113 +574,6 @@
 
 					</section>
 				</section>
-
-				<section id="vuecli-create-react-app">
-
-					<section>
-						<div class="fight-container">
-							<img src="./assets/create-react-app.png" height="50"><br>
-							<img src="./assets/vs.png" height="100"><br>
-							<img src="./assets/vue-cli.png" height="50">
-						</div>
-					</section>
-
-					<section>
-						<img src="./assets/create-react-app.png" height="50"><br>
-						<pre>
-							<code data-trim>
-								npx create-react-app my-app
-						    </code>
-						</pre>
-					</section>
-
-					<section>
-						<img src="./assets/vue-cli.png" height="50"><br>
-						<pre>
-							<code data-trim>
-								npx @vue/cli create --default hello-world
-						    </code>
-						</pre>
-					</section>
-
-					<section>
-						<pre>
-							<code data-trim>
-								npm install -g @vue/cli
-						    </code>
-							<code data-trim>
-							    vue create hello-world
-						    </code>
-						</pre>
-						<img src="./assets/vuecli/cli-new-project.png" height="500">
-					</section>
-
-					<section>
-						<img src="./assets/vuecli/cli-select-features.png" height="500">
-					</section>
-
-					<section>
-						<pre>
-							<code data-trim data-line-numbers>
-							    vue ui
-						    </code>
-						</pre>
-						<img src="./assets/vuecli/vuecli-create.png" height="500">
-					</section>
-
-					<section>
-						<img src="./assets/vuecli/vuecli-presets.png" height="400">
-					</section>
-
-					<section>
-						<img src="./assets/vuecli/vuecli-features.png" height="500" width="1000">
-						<img src="./assets/vuecli/vuecli-features2.png" height="100" width="1000">
-					</section>
-
-					<section>
-						<img src="./assets/vuecli/vuecli-dependencies.png">
-					</section>
-
-					<section>
-						<img src="./assets/vuecli/vuecli-dependencies-install.png">
-					</section>
-
-				</section>
-
-				<section id="documentation">
-					<img src="./assets/documentation.png">
-					<p class="text">
-						React’s documentation pales in comparison with Vue’s.
-						It goes through the basics of React development and includes some advanced concepts but the presentation isn’t as accessible or well-structured.
-					</p>
-				</section>
-
-				<section id="bundlesize">
-					<img src="./assets/bundle-size.png">
-					<img src="./assets/react-vue-size.png">
-
-					<small class="text">Source: https://bundlephobia.com/</small>
-
-				</section>
-
-
-				<section id="SSR-ServerSideRendering">
-					<img src="./assets/server-side-rendering.png">
-					<div class="r-stack">
-						<div class="fragment current-visible">
-							<p class="text">- No Official Documentation on SSR for React</p>
-							<p class="text">+ The React API supports an object called ReactDOMServer which comes handy when you want to display the components in the form of a HTML code.</p>
-							<p class="text">+ Next.js (enables SSR, but without official support)</p>
-						</div>
-						<div class="fragment current-visible">
-							<p class="text">+ Official guide for Vue.js for building Vue application rendered on the server.</p>
-							<p class="text">- Official guide Requires some knowledge of Node.js and Webpack</p>
-							<p class="text">+ Nuxt.js offers certain additional features</p>
-							<p class="text">- Nuxt.js limits the developer’s direct control over the application structure</p>
-						</div>
-					</div>
-				</section>
-
 				<section id="legacycode">
 					<section>
 						<img src="./assets/integration-legacy-code.png">
@@ -670,20 +698,18 @@
 						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/GRjJpEe?editors=1010"></iframe>
 					</section>
 				</section>
+				<section id="bundlesize">
+					<img src="./assets/bundle-size.png">
+					<img src="./assets/react-vue-size.png">
 
-				<section>
-				    <img src="./assets/differences/learning-curve.png">
+					<small class="text">Source: https://bundlephobia.com/</small>
 
-				    <p class="fragment text">Functional paradigm</p>
-				    <p class="fragment text">JSX</p>
-				    <p class="fragment text">ES2015+</p>
-				    <p class="fragment text">Build systems</p>
 				</section>
 				<section id="performance">
 					<img src="./assets/differences/performance.png">
 
 					<section>
-					    <p class="fragment text">Rendering engines</p>
+						<p class="fragment text">Rendering engines</p>
 					</section>
 
 					<section>
@@ -697,72 +723,41 @@
 					</section>
 					<section>
 						<div class="r-stack">
-						    <img class="fragment" src="./assets/performance/table-1.png" height="400">
-						    <img class="fragment" src="./assets/performance/table-2.png" height="400">
-						    <img class="fragment" src="./assets/performance/table-3.png" height="400">
+							<img class="fragment" src="./assets/performance/table-1.png" height="400">
+							<img class="fragment" src="./assets/performance/table-2.png" height="400">
+							<img class="fragment" src="./assets/performance/table-3.png" height="400">
 						</div>
 
 						<small class="fragment text">Source: https://stefankrause.net/js-frameworks-benchmark8/table.html</small>
 					</section>
 				</section>
-				<section id="community">
-				    <img src="./assets/differences/community.png">
-
-				    <section>
-				    </section>
-				    <section>
-				        <p class="fragment text">Size of talent pool</p>
-				        <p class="fragment text">Attracting talent</p>
-				        <p class="fragment text">Onboarding new hires</p>
-				    </section>
-				    <section>
-						<div class="r-stack">
-				            <img class="fragment" src="./assets/state-of-js/satisfaction-0.png" height="400">
-				            <img class="fragment" src="./assets/state-of-js/satisfaction-1.png" height="400">
-				            <img class="fragment" src="./assets/state-of-js/satisfaction-2.png" height="400">
+				<section id="ssr">
+					<img src="./assets/server-side-rendering.png">
+					<div class="r-stack">
+						<div class="fragment current-visible">
+							<p class="text">- No Official Documentation on SSR for React</p>
+							<p class="text">+ The React API supports an object called ReactDOMServer which comes handy when you want to display the components in the form of a HTML code.</p>
+							<p class="text">+ Next.js (enables SSR, but without official support)</p>
 						</div>
-
-						<small class="fragment text">Source: https://2019.stateofjs.com/overview/</small>
-				    </section>
-				    <section>
-				        <img class="fragment" src="./assets/state-of-js/satisfaction-3.png" height="400">
-
-						<small class="fragment text">Source: https://2019.stateofjs.com/front-end-frameworks/</small>
-				    </section>
-				    <section>
-				        <img src="./assets/github-stars/react.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/vuejs.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/mobx.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/redux.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/vuex.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/react-native.png">
-				        <img class="fragment github-stars" src="./assets/github-stars/vue-native.png">
-				    </section>
-				    <section>
-						<div class="r-stack">
-				            <img class="fragment" src="./assets/stackoverflow/popularity-0.png" height="400">
-				            <img class="fragment" src="./assets/stackoverflow/popularity-1.png" height="400">
-				            <img class="fragment" src="./assets/stackoverflow/popularity-2.png" height="400">
+						<div class="fragment current-visible">
+							<p class="text">+ Official guide for Vue.js for building Vue application rendered on the server.</p>
+							<p class="text">- Official guide Requires some knowledge of Node.js and Webpack</p>
+							<p class="text">+ Nuxt.js offers certain additional features</p>
+							<p class="text">- Nuxt.js limits the developer’s direct control over the application structure</p>
 						</div>
-
-						<small class="fragment text">Source: https://insights.stackoverflow.com/survey/2020#technology-web-frameworks-all-respondents2</small>
-				    </section>
-
-				    <section>
-				        <img src="./assets/stackoverflow-chart.png" height="400">
-				    </section>
+					</div>
 				</section>
-				<section>
-				    <img src="./assets/differences/architecture.png">
+				<section id="redux-vs-vuex">
 
-				    <p class="fragment text">Functional paradigm</p>
-				    <p class="fragment text">One-way or two-way data flows</p>
-				    <p class="fragment text">Freedom of choice</p>
-				    <p class="fragment text">Room for human error</p>
-				    <p class="fragment text">Version updates with breaking changes</p>
-				    <p class="fragment text">Getting started complexity</p>
 				</section>
-				<section>
+				<!--				<section id="demo">-->
+<!--				    <img src="./assets/headers/demo.png">-->
+
+<!--				    <br>-->
+
+<!--				    <iframe class="fragment demo" src="http://localhost:8008"></iframe>-->
+<!--				</section>-->
+				<section id="adoption-in-launchmetrics">
 				    <img src="./assets/differences/adoption-in-launchmetrics.png">
 
 				    <p class="fragment text">Most teams use React</p>
