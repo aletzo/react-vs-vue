@@ -42,6 +42,9 @@
             .street-fighter.reveal-viewport {
 		        background-color: rgba(1, 13, 95, 1);
             }
+            .street-fighter .reveal pre {
+                box-shadow: none !important;
+            }
             .street-fighter .reveal .text {
                 color: #fff !important;
             }
@@ -753,6 +756,240 @@
 				</section>
 				<section id="redux-vs-vuex">
 
+				</section>
+				<section id="design-patterns-react">
+				    <img src="./assets/headers/design-patterns.png">
+
+				    <img src="./assets/frameworks/react.png" height="80">
+
+				    <section>
+				        
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Destructuring</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                function Hello(props) {
+                                    return <div>Hello {props.name}!</div>;
+                                }
+
+                                function Hello({ name }) {
+                                    return <div>Hello {name}!</div>;
+                                }
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Rest parameter syntax</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                            function Hello({ name, ...restProps }) {
+                                return &lt;div {...restProps}&gt;Hello {name}!&lt;/div&gt;;
+                            }
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Array children</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                <ol>{list}</ol>
+
+                                <ol>{[<li>todo 1</li>, <li>todo 2</li>]}</ol>
+
+                                <ol>
+                                    {todos.map(({ id, ...todo }) => (
+                                    &lt;TodoItem key={id} {...todo} /&gt;
+                                    ))}
+                                </ol>
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Event switch</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                onClick() { this.setState({ counter: count + 1 })}
+                                onMouseEnter() { this.setState({ hover: true }) }
+
+                                handleEvent({type}) {
+                                    switch(type) {
+                                        case 'click':
+                                            return this.setState({ counter: count + 1 })
+                                        case 'mouseenter':
+                                            return this.setState({ hover: true })
+                                        default:
+                                            return console.error(`Nooo`)
+                                    }
+                                }
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Controlled input</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                render() {
+                                    return (
+                                    &lt;input
+                                        value={this.state.name}
+                                        onChange={e =&gt; this.setState({ name: e.target.value })}
+                                    /&gt;
+                                    )
+                                }
+				            </code>
+				        </pre>
+				    </section>
+				</section>
+				<section id="design-patterns-vuejs">
+				    <img src="./assets/headers/design-patterns.png">
+
+				    <img src="./assets/frameworks/vuejs.png" height="80">
+
+				    <section>
+				        
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Single File Component</p>
+
+				        <pre style="font-size:12px">
+							<code data-trim data-line-numbers>
+                                <template>
+                                    <div class="counter" @click="handleClick" >Click me: {{count}}!</div>
+                                </template>
+
+                                <script>
+                                export default {
+                                    data() {
+                                        return {
+                                            count: 0,
+                                        };
+                                    },
+                                    methods: {
+                                        handleClick() {
+                                            this.count++;
+                                        },
+                                    },
+                                };
+                                </script>
+
+                                &lt;style scoped&gt;
+                                .counter {
+                                    color: #ff0000;
+                                    cursor: pointer;
+                                }
+                                &lt;/style&gt;
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">JSX</p>
+
+				        <pre style="font-size:12px">
+							<code data-trim data-line-numbers>
+                                export default {
+                                    template: `
+                                        <div class="counter" @click="handleClick" >Click me: {{count}}!</div>
+                                    `,
+
+                                    // JSX
+                                    render() {
+                                        return (
+                                            <div class="counter" @click="handleClick" >Click me: {{count}}!</div>
+                                        )
+                                    }
+                                };
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Stateless components</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                &lt;template functional&gt;
+                                    <div class="header">Hello {{name}}!</div>
+                                &lt;/template&gt;
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Component composition - Extends</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                import BaseButton from './BaseButton';
+
+                                export default {
+                                    extends: BaseButton,
+                                    props: ['buttonText'],
+                                };
+				            </code>
+				        </pre>
+				    </section>
+				    <section>
+				        <br>
+				        <br>
+				        <br>
+
+				        <p class="text">Component composition - Mixins</p>
+
+				        <pre>
+							<code data-trim data-line-numbers>
+                                import closableMixin from './mixins/closableMixin';
+
+                                export default {
+                                    mixins: [closableMixin],
+                                    props: ['text'],
+                                };
+				            </code>
+				        </pre>
+				    </section>
 				</section>
 				<!--				<section id="demo">-->
 <!--				    <img src="./assets/headers/demo.png">-->
