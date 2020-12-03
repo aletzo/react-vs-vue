@@ -1605,6 +1605,8 @@
 
             const audio = new Audio('./assets/sounds-the-world-warrior.mp3');
 
+            audio.volume = 0.5;
+
             Reveal.on( 'fragmentshown', event => {
                 if (event?.fragment?.id === 'vuejs-logo') {
                     document.body.classList.add('street-fighter');
@@ -1617,7 +1619,7 @@
                     setTimeout(() => {
                         audio.pause();
 						audio.currentTime = 0;
-                    }, 11200);
+                    }, 5200);
                 }
             } );
 		</script>
