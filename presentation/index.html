@@ -1141,16 +1141,28 @@
 					    while the vue developers get most of them out of the box
 					</aside>
 				</section>
+				<section id="bundlesize">
+					<img src="./assets/bundle-size.png">
+					<img src="./assets/react-vue-size.png">
 
+					<small class="text">Source: https://bundlephobia.com/</small>
+
+				</section>
 				<section id="documentation">
-					<img src="./assets/documentation.png">
-					<p class="text">
+					<aside class="notes">
 						React’s documentation pales in comparison with Vue’s.
 						It goes through the basics of React development and includes some advanced concepts but the presentation isn’t as accessible or well-structured.
-					</p>
+					</aside>
+					<img src="./assets/documentation.png">
+					<section></section>
+					<section>
+						<p class="text">While React’s documentation is good, Vue’s documentation is largely considered better.</p>
+					</section>
+					<section>
+						<p class="text">Vue documentation is very well written and attempts to answer most (if not all) questions that could possibly come up.</p>
+					</section>
 				</section>
 				<section id="create-react-app-vs-vuecli">
-
 					<section>
 						<div class="fight-container">
 							<img src="./assets/create-react-app.png" height="50"><br>
@@ -1284,14 +1296,17 @@
 					</section>
 
 					<section>
+						<aside class="notes">
+							The choice between JSX and templates comes down to personal preference.
+							JSX can feel more powerful and flexible while templates offer a clear separation of concerns preventing you from injecting too much logic into views.
+						</aside>
 						<div class="fight-container">
 							<img src="./assets/react-jsx.png" height="50"><br>
 							<img src="./assets/vs.png" height="100"><br>
 							<img src="./assets/vue-templates.png" height="50">
 						</div>
 						<p class="text">
-							The choice between JSX and templates comes down to personal preference.
-							JSX can feel more powerful and flexible while templates offer a clear separation of concerns preventing you from injecting too much logic into views.
+							Conclusion
 						</p>
 
 					</section>
@@ -1414,18 +1429,11 @@
 					</section>
 
 					<section>
-						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/vYXOLLB?editors=1010"></iframe>
+						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/vYXOLLB?editors=0010"></iframe>
 					</section>
 					<section>
 						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/GRjJpEe?editors=1010"></iframe>
 					</section>
-				</section>
-				<section id="bundlesize">
-					<img src="./assets/bundle-size.png">
-					<img src="./assets/react-vue-size.png">
-
-					<small class="text">Source: https://bundlephobia.com/</small>
-
 				</section>
 				<section id="ssr">
 					<img src="./assets/server-side-rendering.png">
@@ -1444,7 +1452,88 @@
 					</div>
 				</section>
 				<section id="redux-vs-vuex">
+					<aside class="notes">
+						Redux & Vuex are lightweight libraries, mainly for managing application state.
+						<br>
+						<br>
+						In general, communication between components that don’t have parent <-> children relation is rather tricky and discouraged
+						1- When to use and when not to use global state?
+						<br>
+						<br>
+						An Action consists of action type and eventually action payload, that is the data that will be propagated to the store.
+						Next in the queue are dispatcher and store.
+						The Store is a “single source of truth” - it’s a global state of our application.
+						It's the central point of the Flux pattern, where data are stored and passed to all components.
+						So, the dispatcher takes an action and dispatches it to a store, which updates themself and propagates a change event to views.
+						This ensures that the view layer always has the newest data from the store.
+						<br>
+						<br>
 
+						<br>
+						<br>
+
+					</aside>
+					<section>
+						<img src="./assets/redux-vs-vuex.png">
+						<p class="text">
+							“Flux libraries are like glasses: you’ll know when you need them”.<br><br>
+							Dan Abramov<br>
+							Software engineer at Facebook
+						</p>
+					</section>
+					<section>
+						<img src="./assets/redux-vs-vuex.png">
+						<aside class="notes">
+							Redux and Vuex (with some diffs) are based on Flux architectural pattern
+						</aside>
+						<p class="text">
+							<img alt="flux-pattern" src="./assets/flux-pattern.png"/>
+							<small>Flux architectural pattern</small>
+						</p>
+					</section>
+					<section>
+						<img alt="flux-pattern" src="./assets/redux/redux.png"/>
+						<br>
+						<small>Redux architectural pattern</small>
+					</section>
+					<section>
+						<img alt="flux-pattern" src="./assets/vuex/vuex-pattern.png" height="400" width="600"/>
+						<br>
+						<small>Vuex architectural pattern</small>
+					</section>
+					<section>
+						<img alt="flux-pattern" src="./assets/vuex/vue-vuex-main.png"/>
+						<br>
+						<small>Creating vue instance</small>
+					</section>
+					<section>
+						<img alt="flux-pattern" src="./assets/vuex/vue-store.js.png" height="600" width="659"/>
+						<br>
+						<small>Vuex Store</small>
+					</section>
+					<section>
+						<img alt="flux-pattern" src="./assets/vuex/counter.vue.png"/>
+						<br>
+						<small>Counter Component</small>
+					</section>
+
+					<section>
+						<img alt="flux-pattern" src="./assets/redux/react-redux-main.png"/>
+						<br>
+						<small>Creating react instance</small>
+					</section>
+
+					<section>
+						<img alt="flux-pattern" src="./assets/redux/react-reducer.png"/>
+						<br>
+						<small>Redux Reducer</small>
+					</section>
+
+					<section>
+						<img alt="flux-pattern" src="./assets/redux/Counter-Component-React.png" height="630" width="677"/>
+						<br>
+						<small>React Component</small>
+					</section>
 				</section>
 
 				<section id="summary">
@@ -1584,12 +1673,13 @@
                     document.body.classList.add('street-fighter');
 
 
-                    if (audio.paused) {
+                    if (audio.paused && window.innerWidth>900) {
                         audio.play();
                     }
 
                     setTimeout(() => {
                         audio.pause();
+						audio.currentTime = 0;
                     }, 11200);
                 }
             } );
