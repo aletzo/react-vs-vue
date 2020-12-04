@@ -1090,20 +1090,18 @@
 				</section>
 				<section id="bundlesize">
 					<img src="./assets/bundle-size.png">
-					<img src="./assets/react-vue-size.png">
+					<section></section>
+					<section>
+						<img src="./assets/react-vue-size.png">
 
-					<small class="text">Source: https://bundlephobia.com/</small>
-
+						<small class="text">Source: https://bundlephobia.com/</small>
+					</section>
 				</section>
 				<section id="documentation">
-					<aside class="notes">
-						React’s documentation pales in comparison with Vue’s.
-						It goes through the basics of React development and includes some advanced concepts but the presentation isn’t as accessible or well-structured.
-					</aside>
 					<img src="./assets/documentation.png">
 					<section></section>
 					<section>
-						<p class="text">While React’s documentation is good, Vue’s documentation is largely considered better.</p>
+						<p class="text">While React’s documentation is good,<br> Vue’s documentation is largely considered better.</p>
 					</section>
 					<section>
 						<p class="text">Vue documentation is very well written and attempts to answer most (if not all) questions that could possibly come up.</p>
@@ -1193,6 +1191,12 @@
 
 						<pre>
 							<code data-trim>
+								<div id='root'></div>
+							</code>
+						</pre>
+
+						<pre>
+							<code data-trim>
 								const names = ['John', 'Sarah', 'Kevin', 'Alice'];
 								const displayNames = (
 								<ul>
@@ -1243,18 +1247,12 @@
 					</section>
 
 					<section>
-						<aside class="notes">
-							The choice between JSX and templates comes down to personal preference.
-							JSX can feel more powerful and flexible while templates offer a clear separation of concerns preventing you from injecting too much logic into views.
-						</aside>
 						<div class="fight-container">
 							<img src="./assets/react-jsx.png" height="50"><br>
 							<img src="./assets/vs.png" height="100"><br>
 							<img src="./assets/vue-templates.png" height="50">
+							<p class="text">Conclusion</p>
 						</div>
-						<p class="text">
-							Conclusion
-						</p>
 
 					</section>
 				</section>
@@ -1263,45 +1261,51 @@
 						<img src="./assets/integration-legacy-code.png">
 						<div class="r-stack">
 							<p class="fragment current-visible text">
-								👍 Vue.js is flexible enough to be used effectively via a simple &lt;script&gt; library.
+								👍 <br> Vue.js is flexible enough to be used effectively via a simple &lt;script&gt; library.
 							</p>
 							<p class="fragment current-visible text">
-								👍 Vue.js can be grafted onto existing HTML markup and DOM content in-place with almost zero development effort or prerequisites.
+								👍 <br> Vue.js can be grafted onto existing HTML markup and DOM content in-place with almost zero development effort or prerequisites.
 							</p>
-							<pre class="fragment current-visible"><code data-trim data-line-numbers>
-							&lt;main&gt;
-							  &lt;div class="thing"&gt;
-								&lt;p&gt;Some content here&lt;/p&gt;
-							  &lt;/div&gt;
-							&lt;/main&gt;
-							&lt;script src="jquery.min.js"&gt;
-							&lt;/script&gt;
-							</code></pre>
-							<pre class="fragment current-visible"><code data-trim data-line-numbers>
-							&lt;main&gt;
-							  &lt;div class="thing"&gt;
-								&lt;p&gt;Some content here&lt;/p&gt;
-							  &lt;/div&gt;
-							&lt;/main&gt;
-							&lt;script src="vue.min.js"&gt;
-							&lt;/script&gt;
-							&lt;script&gt;
-								...!Some Vue Code Here...
-							&lt;/script&gt;
-							</code></pre>
+							<pre class="fragment current-visible">
+								<code data-trim data-line-numbers>
+									&lt;main&gt;
+									  &lt;div class="thing"&gt;
+										&lt;p&gt;Some content here&lt;/p&gt;
+									  &lt;/div&gt;
+									&lt;/main&gt;
+									&lt;script src="jquery.min.js"&gt;
+									&lt;/script&gt;
+								</code>
+							</pre>
+							<pre class="fragment current-visible">
+								<code data-trim data-line-numbers>
+									&lt;main&gt;
+									  &lt;div class="thing"&gt;
+										&lt;p&gt;Some content here&lt;/p&gt;
+									  &lt;/div&gt;
+									&lt;/main&gt;
+									&lt;script src="vue.min.js"&gt;
+									&lt;/script&gt;
+									&lt;script&gt;
+										...!Some Vue Code Here...
+									&lt;/script&gt;
+								</code>
+							</pre>
 
-							<pre class="fragment current-visible"><code data-trim data-line-numbers>
-							&#x3C;button id=&#x22;myButton&#x22;&#x3E;Click Me! &#x3C;/button&#x3E;
-							&#x3C;script&#x3E;
-							$(document).ready(function() {
+							<pre class="fragment current-visible">
+								<code data-trim data-line-numbers>
+								&#x3C;button id=&#x22;myButton&#x22;&#x3E;Click Me! &#x3C;/button&#x3E;
+								&#x3C;script&#x3E;
+								$(document).ready(function() {
 
-							  $(&#x27;#myButton&#x27;).click(function() {
-								alert(1);
-							  });
+								  $(&#x27;#myButton&#x27;).click(function() {
+									alert(1);
+								  });
 
-							});
-							&#x3C;/script&#x3E;
-							</code></pre>
+								});
+								&#x3C;/script&#x3E;
+								</code>
+							</pre>
 
 							<pre class="fragment current-visible"><code data-trim data-line-numbers>
 							&#x3C;div id=&#x22;app&#x22;&#x3E;
@@ -1320,32 +1324,33 @@
 							&#x3C;/script&#x3E;
 							</code></pre>
 
-							<pre class="fragment current-visible"><code data-trim data-line-numbers>
-							&#x3C;form&#x3E;
-							  &#x3C;input type=&#x22;number&#x22; id=&#x22;first&#x22;&#x3E; +
-							  &#x3C;input type=&#x22;number&#x22; id=&#x22;second&#x22;&#x3E; =
-							  &#x3C;input type=&#x22;number&#x22; id=&#x22;sum&#x22;&#x3E;
-							  &#x3C;button id=&#x22;sumButton&#x22;&#x3E;Sum&#x3C;/button&#x3E;
-							&#x3C;/form&#x3E;
+							<pre class="fragment current-visible r-stretch">
+								<code data-trim data-line-numbers>
+									&#x3C;form&#x3E;
+									  &#x3C;input type=&#x22;number&#x22; id=&#x22;first&#x22;&#x3E; +
+									  &#x3C;input type=&#x22;number&#x22; id=&#x22;second&#x22;&#x3E; =
+									  &#x3C;input type=&#x22;number&#x22; id=&#x22;sum&#x22;&#x3E;
+									  &#x3C;button id=&#x22;sumButton&#x22;&#x3E;Sum&#x3C;/button&#x3E;
+									&#x3C;/form&#x3E;
 
-							&#x3C;script&#x3E;
-							$(document).ready(function() {
-							  let $first = $(&#x27;#first&#x27;);
-							  let $second = $(&#x27;#second&#x27;);
-							  let $sum = $(&#x27;#sum&#x27;);
-							  let $button = $(&#x27;#sumButton&#x27;);
+									&#x3C;script&#x3E;
+									$(document).ready(function() {
+									  let $first = $(&#x27;#first&#x27;);let $second = $(&#x27;#second&#x27;);
+									  let $sum = $(&#x27;#sum&#x27;);let $button = $(&#x27;#sumButton&#x27;);
 
-							  $button.on(&#x27;click&#x27;, function(e) {
-								e.preventDefault();
-								let total = parseInt($first.val(),10) + parseInt($second.val(),10);
-								$sum.val(total);
-							  });
-							});
-							&#x3C;/script&#x3E;
-							</code></pre>
+									  $button.on(&#x27;click&#x27;, function(e) {
+										e.preventDefault();
+										let total = parseInt($first.val(),10)
+											+ parseInt($second.val(),10);
+										$sum.val(total);
+									  });
+									});
+									&#x3C;/script&#x3E;
+								</code>
+							</pre>
 
 
-							<pre class="fragment current-visible"><code data-trim data-line-numbers>
+							<pre class="fragment current-visible  r-stretch"><code data-trim data-line-numbers>
 							&#x3C;form id=&#x22;myForm&#x22;&#x3E;
 							  &#x3C;input type=&#x22;number&#x22; v-model.number=&#x22;first&#x22;&#x3E; +
 							  &#x3C;input type=&#x22;number&#x22; v-model.number=&#x22;second&#x22;&#x3E; =
@@ -1357,9 +1362,7 @@
 							new Vue({
 							  el: &#x27;#myForm&#x27;,
 							  data: {
-								first: 0,
-								second: 0,
-								sum: 0
+								first: 0,second: 0,sum: 0
 							  },
 							  methods: {
 								doSum: function() {
@@ -1370,68 +1373,45 @@
 							&#x3C;/script&#x3E;
 							</code></pre>
 							<p class="fragment current-visible text">
-								Conclusion: <br> Vue is more versatile because it can easily be included in legacy code while React doesn't give that option.
+								Demo
+								<br><br>
+								<a href="https://codepen.io/sofien/pen/vYXOLLB" target="_blank">jQuery Invoice App</a>
+								<br>
+								<a href="https://codepen.io/sofien/pen/GRjJpEe" target="_blank">Vue Invoice App</a>
+							</p>
+							<p class="fragment current-visible text">
+								Conclusion
 							</p>
 						</div>
-					</section>
-
-					<section>
-						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/vYXOLLB?editors=0010"></iframe>
-					</section>
-					<section>
-						<iframe height="700" width="1200" src="https://codepen.io/sofien/pen/GRjJpEe?editors=1010"></iframe>
 					</section>
 				</section>
 				<section id="ssr">
 					<img src="./assets/server-side-rendering.png">
-					<div class="r-stack">
-						<div class="fragment current-visible">
-							<p class="text">👎 No Official Documentation on SSR for React</p>
-							<p class="text">👍 The React API supports an object called ReactDOMServer which comes handy when you want to display the components in the form of a HTML code.</p>
-							<p class="text">👍 Next.js (enables SSR, but without official support)</p>
-						</div>
-						<div class="fragment current-visible">
-							<p class="text">👍 Official guide for Vue.js for building Vue application rendered on the server.</p>
-							<p class="text">👎 Official guide requires some knowledge of Node.js and Webpack</p>
-							<p class="text">👍 Nuxt.js offers certain additional features</p>
-							<p class="text">👎 Nuxt.js limits the developer’s direct control over the application structure</p>
-						</div>
-					</div>
+					<section>
+						<img class="fragment" src="./assets/logo-react.png" height="90">
+						<p class="text fragment">👍 The React API supports an object called ReactDOMServer</p>
+						<p class="text fragment">👍 Next.js </p>
+						<p class="text fragment">👎 No Official Documentation</p>
+					</section>
+					<section>
+						<img class="fragment" src="./assets/logo-vuejs.png" height="90">
+						<p class="text fragment">👍 Official guide</p>
+						<p class="text fragment">👎 Official guide requires some knowledge of Node.js and Webpack</p>
+						<p class="text fragment">👍 Nuxt.js</p>
+						<p class="text fragment">👎 Nuxt.js limits</p>
+					</section>
 				</section>
 				<section id="redux-vs-vuex">
-					<aside class="notes">
-						Redux & Vuex are lightweight libraries, mainly for managing application state.
-						<br>
-						<br>
-						In general, communication between components that don’t have parent <-> children relation is rather tricky and discouraged
-						1- When to use and when not to use global state?
-						<br>
-						<br>
-						An Action consists of action type and eventually action payload, that is the data that will be propagated to the store.
-						Next in the queue are dispatcher and store.
-						The Store is a “single source of truth” - it’s a global state of our application.
-						It's the central point of the Flux pattern, where data are stored and passed to all components.
-						So, the dispatcher takes an action and dispatches it to a store, which updates themself and propagates a change event to views.
-						This ensures that the view layer always has the newest data from the store.
-						<br>
-						<br>
 
-						<br>
-						<br>
-
-					</aside>
 					<section>
 						<img src="./assets/redux-vs-vuex.png">
-						<p class="text">
+						<p class="text fragment">
 							“Flux libraries are like glasses: you’ll know when you need them”.<br><br>
 							Dan Abramov<br>
 							Software engineer at Facebook
 						</p>
 					</section>
 					<section>
-						<aside class="notes">
-							Redux and Vuex (with some diffs) are based on Flux architectural pattern
-						</aside>
 						<p class="text">
 							<img alt="flux-pattern" src="./assets/flux-pattern.png"/>
 							<small>Flux architectural pattern</small>
